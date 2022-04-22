@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
     <sp_widget action="INSERT_OR_UPDATE">
         <category>custom</category>
-        <client_script><![CDATA[function($scope,$rootScope,spModal,spUtil) {
+        <client_script><![CDATA[// data, options
+// this.server.get(), this.server.update(), this.server.refresh()
+// spUtil, spModal, spAriaUtil
+
+function($scope,$rootScope,spModal,spUtil) {
 	/* widget controller */
 	var c = this;
 
@@ -92,11 +96,16 @@
         <option_schema/>
         <public>false</public>
         <roles/>
-        <script><![CDATA[(function() {
+        <script><![CDATA[// data, input, options
+// GlideSPScriptable
 
+(function() {
 	if (input && input.noteID) {
 		var note = new GlideRecord('x_snc_createnotes_note');
-		if (note.get(input.noteID)) {
+		// note (GlideRecord) object is being operated on via 
+		// get method and the note object now contains the 
+		// found record
+		if (note.get(input.noteID)) { 
 			if (input.action == 'getNote') {
 				data.note = {};
 				$sp.getRecordValues(data.note, note, "title, note, sys_id");
@@ -126,14 +135,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2019-05-30 18:16:57</sys_created_on>
         <sys_id>7a7543e8db3133000613a08a4896195e</sys_id>
-        <sys_mod_count>24</sys_mod_count>
+        <sys_mod_count>27</sys_mod_count>
         <sys_name>Notes  Body</sys_name>
         <sys_package display_value="CreateNotes" source="x_snc_createnotes">df5fd9a5090232007f44e1046c8ff69f</sys_package>
         <sys_policy/>
         <sys_scope display_value="CreateNotes">df5fd9a5090232007f44e1046c8ff69f</sys_scope>
         <sys_update_name>sp_widget_7a7543e8db3133000613a08a4896195e</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-04-18 18:36:13</sys_updated_on>
+        <sys_updated_on>2022-04-19 02:03:03</sys_updated_on>
         <template><![CDATA[<div ng-hide="c.data.noteID">
   <h3>
     Select a note to edit.
@@ -142,7 +151,7 @@
 <div class="panel panel-default" ng-show="c.data.noteID">
   <div class="panel-heading clearfix">
     <div class="row">
-      <div class="col-md-11">
+      <div class="col-xs-11">
         <input 
         	class="form-control" 
           id="note-title" 
