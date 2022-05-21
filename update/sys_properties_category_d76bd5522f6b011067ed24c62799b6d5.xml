@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties_category">
+    <sys_properties_category action="INSERT_OR_UPDATE">
+        <name>Meeting Note Properties</name>
+        <sys_class_name>sys_properties_category</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-21 01:49:31</sys_created_on>
+        <sys_id>d76bd5522f6b011067ed24c62799b6d5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Meeting Note Properties</sys_name>
+        <sys_package display_value="CreateNotes" source="x_snc_createnotes">df5fd9a5090232007f44e1046c8ff69f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CreateNotes">df5fd9a5090232007f44e1046c8ff69f</sys_scope>
+        <sys_update_name>sys_properties_category_d76bd5522f6b011067ed24c62799b6d5</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-21 01:49:31</sys_updated_on>
+        <title><![CDATA[<p><img title="" src="sys_attachment.do?sys_id&#61;9916d1500f9af2000d030dbce1050ede" alt="" align="baseline" border="" hspace="" vspace="" />  <strong>Meeting Notes Application Properties</strong>  </p>
+<p>These properties can be read and updated by users with the Meeting Notes  Application&#39;s admin role: x_snc_createnotes.note_user</p>]]></title>
+    </sys_properties_category>
+    <sys_translated_text action="delete_multiple" query="documentkey=d76bd5522f6b011067ed24c62799b6d5"/>
+</record_update>
